@@ -1,0 +1,43 @@
+.header{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    
+    gap: 20px;
+    background-color: white;
+    img{
+        padding-left: 200px;
+        /* margin-top: 10px; */
+    }
+ 
+}
+
+.input{
+    background-color:lightsteelblue;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    
+    
+    .search{
+        margin: 5px;
+    }
+    
+    
+    input{
+
+        height: 30px;
+    padding: 0px;
+    background-color:lightsteelblue;
+    border: none;
+    outline: none;
+    
+   
+    }
+    
+
+}

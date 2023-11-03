@@ -1,0 +1,186 @@
+.home{
+    display: flex;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 20px;
+    gap: 1%;
+    
+    .sidebar{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 230px;
+
+        .sidebar-top{
+            flex:1;
+            border: 1px solid rgb(189, 188, 188);
+            border-radius: 10px;
+            height: 100%;
+            background-color: white;
+
+        
+       
+        
+
+            hr{
+                color: rgb(247, 241, 241);
+            }
+
+
+
+            .profile-img{
+                margin-left:40%;
+                cursor: pointer;
+                margin-top: -30px;
+
+            }
+            .name{
+                font-size: 8px;
+                text-align: center;
+                cursor: pointer;
+            }
+            .name p{
+                font-size: 12px;
+                color: rgb(138, 135, 135);
+                text-align: center;
+                cursor:auto;
+            }
+            .views{
+                display: flex;
+                justify-content:space-between;
+                font-weight: 450;
+                margin-left: 10px;
+                margin-right: 10px;
+                cursor: pointer;
+                font-size: 14px;
+            }
+            .post{
+                display: flex;
+                justify-content:space-between;
+                font-weight: 450;
+                margin-left: 10px;
+                margin-right: 10px;
+                cursor: pointer;
+                margin-top: 0px;
+                margin-bottom: 0px;
+                font-size: 14px;
+            }
+            .premium{
+                font-size: 12px;
+                margin-left: 10px;
+                cursor: pointer;
+            }
+            .items{
+                margin: 10px;
+                font-size: 12px;
+
+            }
+        }
+        .sidebar-bottom{
+            background-color: white;
+            border: 1px solid lightgray;
+            border-radius: 10px;
+
+            hr{
+                color:rgb(238, 233, 233);
+            }
+            .recent{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            .groups{
+                margin-left: 10px;
+                margin-right: 10px;
+                overflow-x: hidden;
+                h1{
+                    font-size: 14px;
+                }
+                
+            }
+            .events{
+                display: flex;
+                justify-content: space-between;
+                margin-left: 10px;
+                margin-right: 10px;
+                h1{
+                    font-size: 14px;
+                }
+
+            }
+            .hashtags{
+                display: flex;
+                justify-content: space-between;
+                margin-left: 10px;
+                margin-right: 10px;
+                h1{
+                    font-size: 14px;
+                }
+
+            }
+            .load{
+                text-align: center;
+                color: rgb(105, 103, 103);
+                font-weight: 400;
+                text-decoration: none;
+            }
+        }
+        
+    }
+    .middle{
+        flex:2;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+       
+        
+        .post{
+            background-color: white;
+            border: 1px solid rgb(209, 205, 205);
+            border-radius: 10px;
+            
+            .search-post{
+                margin-top: 10px;
+                display: flex;
+                
+                margin-left: 30px;
+                gap :15px;
+
+                input{
+                    width: 400px;
+                    border-radius: 50px;
+                    border: 1px solid lightgray;
+                }
+                input::placeholder {
+                    padding: 10px;
+                }
+             
+            }
+            .post-icons {
+                display: flex;
+                gap: 25%;
+                margin-left: 80px;
+                margin-top: 20px;
+                margin-bottom: 10px;
+
+                li{
+                    list-style: none;
+                }
+                
+            }
+        }
+        .posts{
+            background-color: white;
+        }
+        
+    }
+    .right-bar{
+        flex: 1;
+        border: 1px solid grey;
+        background-color: white;
+        border-radius: 10px;
+        
+    }
+}
