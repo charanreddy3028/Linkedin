@@ -1,6 +1,6 @@
 import React from 'react'
 import './Post.css'
-import logo from '/home/sricharan/Desktop/React projects/Linkedin/linkedin/src/Components/assets/logo.png'
+import logo from '../assets/logo.png'
 import {FaGlobeAsia} from 'react-icons/fa'
 
 const Post = () => {

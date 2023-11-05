@@ -1,7 +1,7 @@
-import logo from '/home/sricharan/Desktop/React projects/Linkedin/linkedin/src/Components/assets/logo.png'
+import logo from '../assets/logo.png'
 import React from 'react'
 import '../Home/Home.css'
-import bg from '/home/sricharan/Desktop/React projects/Linkedin/linkedin/src/Components/assets/bgimage.jpeg'
+import bg from '../assets/bgimage.jpeg'
 import {BsFillBookmarkFill} from 'react-icons/bs';
 import {MdOutlineKeyboardArrowDown} from 'react-icons/md'
 import {MdPeopleAlt} from 'react-icons/md'
@@ -10,22 +10,23 @@ import {GoFileMedia} from 'react-icons/go';
 import {PiBagSimpleFill} from 'react-icons/pi'
 import {PiArticleBold} from 'react-icons/pi'
 import Post from '../Posts/Post';
+import Header from '../../Header/Header';
 
 const Home = () => {
     return (
-        <div className='home'>
+        <><Header /><div className='home'>
             <div className="sidebar">
                 <div className="sidebar-top">
-                <div className="pic">
-                    <div className="bg-image">
-                        <img src={bg} alt="" style={{ height: "20%", width: "100%" }} />
-                    </div>
-                    <div className="profile-img">
-                        <Link to="/profile"><img src={logo} alt="" style={{ borderRadius: "50%", height: "50px", width: "50px" }} /></Link> 
-                    </div>
+                    <div className="pic">
+                        <div className="bg-image">
+                            <img src={bg} alt="" style={{ height: "20%", width: "100%" }} />
+                        </div>
+                        <div className="profile-img">
+                            <Link to="/profile"><img src={logo} alt="" style={{ borderRadius: "50%", height: "50px", width: "50px" }} /></Link>
+                        </div>
                     </div>
                     <div className="name">
-                        <h1><Link to="/profile" style={{textDecoration:"none" , color:"black"}} >SRICHARAN GUNUPATI</Link> </h1>
+                        <h1><Link to="/profile" style={{ textDecoration: "none", color: "black" }}>SRICHARAN GUNUPATI</Link> </h1>
                         <p>Intern @Techsophy</p>
                         <hr />
                     </div>
@@ -47,35 +48,35 @@ const Home = () => {
                         </div>
                         <hr />
                     </div>
-                    <div className="items"> 
-                        <h3><BsFillBookmarkFill/>  My items</h3>
+                    <div className="items">
+                        <h3><BsFillBookmarkFill />  My items</h3>
                     </div>
                 </div>
                 <div className="sidebar-bottom">
                     <div className="recent">
-                    Recent
-                    <MdOutlineKeyboardArrowDown/>
+                        Recent
+                        <MdOutlineKeyboardArrowDown />
                     </div>
                     <div className="groups">
                         <h1>Groups</h1>
-                        <p><MdPeopleAlt/>Machine Learning group </p>
-                        
+                        <p><MdPeopleAlt />Machine Learning group </p>
+
 
                     </div>
                     <div className="events">
-                    <h1>New Events</h1>
+                        <h1>New Events</h1>
                         <p>+</p>
                     </div>
                     <div className="hashtags">
-                    <h1>New Hashtags</h1>
+                        <h1>New Hashtags</h1>
                         <p>+</p>
                     </div>
                     <hr />
                     <div className="load">
-                        <p><Link to="/Network" style={{textDecoration:"none" , color:"grey"}} >Discover More</Link></p>
+                        <p><Link to="/Network" style={{ textDecoration: "none", color: "grey" }}>Discover More</Link></p>
                     </div>
-                    
-                    
+
+
                 </div>
             </div>
             <div className="middle">
@@ -86,21 +87,21 @@ const Home = () => {
 
                     </div>
                     <div className="post-icons">
-                        <li><GoFileMedia/> Media</li>
-                        <li><PiBagSimpleFill/>Job</li>
-                        <li><PiArticleBold/> write an article</li>
+                        <li><GoFileMedia /> Media</li>
+                        <li><PiBagSimpleFill />Job</li>
+                        <li><PiArticleBold /> write an article</li>
 
                     </div>
-                </div> 
-                
+                </div>
+
                 <div className="posts">
-                    <Post/>
+                    <Post />
                 </div>
             </div>
             <div className="right-bar">
                 right
             </div>
-        </div>
+        </div></>
     )
 }
 
