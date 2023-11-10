@@ -25,12 +25,16 @@ const Home = () => {
   const [isPopupOpen, setPopupOpen] = useState(false);
   const [Person, setPerson] = useState('');
   const [text, setText] = useState('');
+  const [url,setUrl] =useState('');
+  const [img,setImg] =useState('');
 
   const handleSave = () => {
-    if (Person && text) {
-      dispatch(addPost({ id: Date.now(), Person: Person, text: text })); // Dispatch the addPost action
+    if (Person && text ) {
+      dispatch(addPost({ id: Date.now(), Person: Person, text: text ,url:url,img:img})); // Dispatch the addPost action
       setPerson('');
       setText('');
+      setUrl('');
+      setImg('');
       setPopupOpen(false);
     }
   }
@@ -129,7 +133,7 @@ const Home = () => {
             </div>
             {
                 isPopupOpen &&(
-                    <Popup onSave={handleSave} onClose={togglePopup}  Person={Person} setText={setText} setPerson={setPerson} text={text} />
+                    <Popup onSave={handleSave} onClose={togglePopup}  Person={Person} setText={setText} setPerson={setPerson} text={text} url={url} setUrl={setUrl} img={img} setImg={setImg} />
                 )
             }
         </div></>

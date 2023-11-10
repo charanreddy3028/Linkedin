@@ -13,7 +13,7 @@ const PostItem = ({ post, onDelete }) => {
     <div className="post">
       <div className="flex">
         <div className="image">
-          <img src={logo} alt="" style={{ borderRadius: "50%", height: "50px", width: "50px" }} />
+          <img src={post.img} alt="" style={{ borderRadius: "50%", height: "50px", width: "50px" }} />
         </div>
         
         <div className="head">
@@ -33,7 +33,7 @@ const PostItem = ({ post, onDelete }) => {
 
       <div className="bgimage">
         <p>{post.text}</p>
-        <img src={bg} alt="" />
+        <img src={post.url} alt="" />
       </div>
 
       <div className="likes" style={{ listStyle: "none" }}>
