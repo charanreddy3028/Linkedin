@@ -22,10 +22,9 @@
     height: 100%;
     background-color: white;
 
-    hr{
-        color: rgb(247, 241, 241);
-    }
+   
 }
+
 .profile-img{
     margin-left:40%;
     cursor: pointer;

@@ -58,8 +58,9 @@ const Home = () => {
                     <div className="name">
                         <h1><Link to="/profile" style={{ textDecoration: "none", color: "black" }}>{name}</Link> </h1>
                         <p>Intern @Techsophy</p>
-                        <hr />
+                        
                     </div>
+                    <hr className='hr' />
                     <div className="impressions">
                         <div className="views">
                             <p>Profile Viewers</p>

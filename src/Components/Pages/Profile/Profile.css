@@ -42,7 +42,8 @@
 }
 .profile-bgimage{
     width: 100%;
-    height: 50%;
+    height: 40%;
+    border-radius: 10px 10px 0px 0px ;
 }
 .profile-image{
     width: 150px;
@@ -55,13 +56,14 @@
     background-color: #fff;
     border: 0.5px solid lightgrey;
     border-radius: 10px;
-    .profile-left-t4-li{
-        list-style: none;
-        margin-left: 20px;
-        overflow: scroll;
-    }
+    
 
     
+}
+.profile-left-t4-li{
+    list-style: none;
+    margin-left: 20px;
+  
 }
 .profile-right{
     flex:0.3;
