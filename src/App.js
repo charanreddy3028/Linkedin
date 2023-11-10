@@ -10,6 +10,8 @@ import Profile from './Components/Pages/Profile/Profile';
 import Login from './Components/Pages/Login/Login';
 import Register from './Components/Pages/Register/Register';
 import Notifications from './Components/Pages/Notifications/Notification';
+import { Provider } from 'react-redux';
+import store from './Components/Pages/Redux/Store';
 
 
 
@@ -18,6 +20,7 @@ function App() {
 
   return (
     <div className="App">
+      <Provider store={store}>
      
       <BrowserRouter>
         
@@ -32,6 +35,7 @@ function App() {
           <Route path="/profile" element={<Profile />} />
         </Routes>
       </BrowserRouter>
+      </Provider>
     </div>
   );
 }

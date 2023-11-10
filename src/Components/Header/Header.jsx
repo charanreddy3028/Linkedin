@@ -1,7 +1,7 @@
 import React from 'react'
 import '../Header/Header.css'
 import Navbar from '../Navbar/Navbar'
-import logo from 'C:/Users/gsred/Desktop/linkedin/Linkedin/src/Components/Pages/assets/logo.png'
+import logo from '../Pages/assets/logo.png'
 import { AiOutlineSearch } from 'react-icons/ai'
 
 const Header = () => {

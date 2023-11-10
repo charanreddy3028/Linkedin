@@ -1,54 +1,33 @@
+// Register.js
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../Register/Register.css'
+import '../Register/Register.css';
+import { useDispatch } from 'react-redux';
+import { registerUser } from '../Redux/Action';
 
 const Register = () => {
+  const dispatch = useDispatch();
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [isFormValid, setIsFormValid] = useState(false);
 
-  const handleFirstNameChange = (e) => {
-    const newFirstName = e.target.value;
-    setFirstName(newFirstName);
-    validateForm(newFirstName, lastName, email, password);
-  };
+  const handleSignUp = () => {
+    const newUser = {
+      firstName,
+      lastName,
+      email,
+      password,
+    };
 
-  const handleLastNameChange = (e) => {
-    const newLastName = e.target.value;
-    setLastName(newLastName);
-    validateForm(firstName, newLastName, email, password);
-  };
-
-  const handleEmailChange = (e) => {
-    const newEmail = e.target.value;
-    setEmail(newEmail);
-    validateForm(firstName, lastName, newEmail, password);
-  };
-
-  const handlePasswordChange = (e) => {
-    const newPassword = e.target.value;
-    setPassword(newPassword);
-    validateForm(firstName, lastName, email, newPassword);
-  };
-
-  const validateForm = (newFirstName, newLastName, newEmail, newPassword) => {
-    // Check if all fields are not empty
-    const isValid =
-      newFirstName.trim() !== '' &&
-      newLastName.trim() !== '' &&
-      newEmail.trim() !== '' &&
-      newPassword.trim() !== '';
-    setIsFormValid(isValid);
+    dispatch(registerUser(newUser));
   };
 
   return (
     <div>
       <div className="form-container">
-      <p className="logo">Linkedin</p>
+        <p className="logo">Linkedin</p>
         <div className="form-wrapper">
-          
           <span className="title">Register</span>
           <form>
             <input
@@ -56,37 +35,40 @@ const Register = () => {
               placeholder="First Name"
               required
               value={firstName}
-              onChange={handleFirstNameChange}
+              onChange={(e) => setFirstName(e.target.value)}
             />
             <input
               type="text"
               placeholder="Last Name"
               required
               value={lastName}
-              onChange={handleLastNameChange}
+              onChange={(e) => setLastName(e.target.value)}
             />
             <input
               type="email"
-              placeholder="email"
+              placeholder="Email"
               required
               value={email}
-              onChange={handleEmailChange}
+              onChange={(e) => setEmail(e.target.value)}
             />
             <input
               type="password"
-              placeholder="password"
+              placeholder="Password"
               required
               value={password}
-              onChange={handlePasswordChange}
+              onChange={(e) => setPassword(e.target.value)}
             />
-            <button>
-              <Link to={isFormValid ? '/' : ''} style={{ textDecoration: 'none' }} disabled={!isFormValid}>
+            <button onClick={handleSignUp}>
+              <Link to="/" style={{ textDecoration: 'none' }}>
                 SignUp
               </Link>
             </button>
           </form>
           <p>
-            You do have an account? <Link to="/" style={{ textDecoration: 'none' }}>Login</Link>
+            You already have an account?{' '}
+            <Link to="/" style={{ textDecoration: 'none' }}>
+              Login
+            </Link>
           </p>
         </div>
       </div>

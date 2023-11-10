@@ -1,5 +1,5 @@
 import logo from '../assets/logo.png'
-import React from 'react'
+import React, { useState } from 'react'
 import '../Home/Home.css'
 import bg from '../assets/bgimage.jpeg'
 import {BsFillBookmarkFill} from 'react-icons/bs';
@@ -11,22 +11,48 @@ import {PiBagSimpleFill} from 'react-icons/pi'
 import {PiArticleBold} from 'react-icons/pi'
 import Post from '../Posts/Post';
 import Header from '../../Header/Header';
+import News from '../News/News';
+import { useDispatch,useSelector } from 'react-redux';
+
+import Popup from './popup';
+import { addPost } from '../Redux/Action';
 
 const Home = () => {
+    const dispatch = useDispatch();
+  const name = useSelector((state) => state.login.name);
+  const posts = useSelector((state) => state.posts);
+
+  const [isPopupOpen, setPopupOpen] = useState(false);
+  const [Person, setPerson] = useState('');
+  const [text, setText] = useState('');
+
+  const handleSave = () => {
+    if (Person && text) {
+      dispatch(addPost({ id: Date.now(), Person: Person, text: text })); // Dispatch the addPost action
+      setPerson('');
+      setText('');
+      setPopupOpen(false);
+    }
+  }
+
+  const togglePopup = () => {
+    setPopupOpen(!isPopupOpen);
+    }
+    
     return (
         <><Header /><div className='home'>
             <div className="sidebar">
                 <div className="sidebar-top">
                     <div className="pic">
                         <div className="bg-image">
-                            <img src={bg} alt="" style={{ height: "20%", width: "100%" }} />
+                            <img src={bg} alt="" style={{ height: "20%", width: "100%" ,borderRadius:"10px  10px 0px 0px"}} />
                         </div>
                         <div className="profile-img">
                             <Link to="/profile"><img src={logo} alt="" style={{ borderRadius: "50%", height: "50px", width: "50px" }} /></Link>
                         </div>
                     </div>
                     <div className="name">
-                        <h1><Link to="/profile" style={{ textDecoration: "none", color: "black" }}>SRICHARAN GUNUPATI</Link> </h1>
+                        <h1><Link to="/profile" style={{ textDecoration: "none", color: "black" }}>{name}</Link> </h1>
                         <p>Intern @Techsophy</p>
                         <hr />
                     </div>
@@ -35,7 +61,7 @@ const Home = () => {
                             <p>Profile Viewers</p>
                             <p>60</p>
                         </div>
-                        <div className="post">
+                        <div className="impressions-post">
                             <p>Post Impressions</p>
                             <p>65</p>
                         </div>
@@ -49,7 +75,7 @@ const Home = () => {
                         <hr />
                     </div>
                     <div className="items">
-                        <h3><BsFillBookmarkFill />  My items</h3>
+                        <span><BsFillBookmarkFill />  My items</span>
                     </div>
                 </div>
                 <div className="sidebar-bottom">
@@ -75,7 +101,7 @@ const Home = () => {
                     <div className="load">
                         <p><Link to="/Network" style={{ textDecoration: "none", color: "grey" }}>Discover More</Link></p>
                     </div>
-
+                    
 
                 </div>
             </div>
@@ -83,7 +109,7 @@ const Home = () => {
                 <div className="post">
                     <div className="search-post">
                         <img src={logo} alt="" style={{ borderRadius: "50%", height: "50px", width: "50px" }} />
-                        <input type="text" placeholder='Start a post' />
+                        <input type="text" placeholder='Start a post' onClick={togglePopup} />
 
                     </div>
                     <div className="post-icons">
@@ -93,14 +119,19 @@ const Home = () => {
 
                     </div>
                 </div>
-
+                <hr style={{width:"555px"}} />
                 <div className="posts">
-                    <Post />
+                    <Post posts={posts}/>
                 </div>
             </div>
             <div className="right-bar">
-                right
+                <News/>
             </div>
+            {
+                isPopupOpen &&(
+                    <Popup onSave={handleSave} onClose={togglePopup}  Person={Person} setText={setText} setPerson={setPerson} text={text} />
+                )
+            }
         </div></>
     )
 }
