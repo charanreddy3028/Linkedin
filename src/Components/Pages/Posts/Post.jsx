@@ -7,7 +7,7 @@ const Post = () => {
   const dispatch = useDispatch();
   const posts = useSelector((state) => state.posts.posts);
 
-  console.log('Posts from Redux:', posts);
+ 
 
   const handleDelete = (postId) => {
     dispatch(deletepost(postId));

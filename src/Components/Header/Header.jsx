@@ -16,7 +16,7 @@ const Header = () => {
 
         </div>
         <div >
-          <input type="text" placeholder='Seacrh' />
+          <input className='header-input' type="text" placeholder='Seacrh' />
 
         </div>
 

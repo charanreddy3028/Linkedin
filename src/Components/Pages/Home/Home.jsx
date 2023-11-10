@@ -88,17 +88,17 @@ const Home = () => {
                         <MdOutlineKeyboardArrowDown />
                     </div>
                     <div className="groups">
-                        <h1>Groups</h1>
+                        <h1 className='groups-h1'>Groups</h1>
                         <p><MdPeopleAlt />Machine Learning group </p>
 
 
                     </div>
                     <div className="events">
-                        <h1>New Events</h1>
+                        <h1 className='events-h1'>New Events</h1>
                         <p>+</p>
                     </div>
                     <div className="hashtags">
-                        <h1>New Hashtags</h1>
+                        <h1 className='hashtags-h1'>New Hashtags</h1>
                         <p>+</p>
                     </div>
                     <hr />
@@ -113,7 +113,7 @@ const Home = () => {
                 <div className="post">
                     <div className="search-post">
                         <img src={logo} alt="" style={{ borderRadius: "50%", height: "50px", width: "50px" }} />
-                        <input type="text" placeholder='Start a post' onClick={togglePopup} />
+                        <input className='middle-input' type="text" placeholder='Start a post' onClick={togglePopup} />
 
                     </div>
                     <div className="post-icons">

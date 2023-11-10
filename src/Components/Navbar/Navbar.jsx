@@ -41,16 +41,16 @@ const Navbar = () => {
             <div className="dropdown" style={{listStyle:'none'}}>
               <li><Link to='/profile'><div className='dropdown-profile'>
                 <div className="dropdown-img">
-                  <img src={logo} alt="" />
+                  <img className="dropdown-img" src={logo} alt="" />
                 </div>
                 <div className="dropdown-name">
-                  <h2>{name}</h2>
-                  <p>Intern @Techsophy</p>
+                  <h2 className='h2'>{name}</h2>
+                  <p className='.p'>Intern @Techsophy</p>
                 </div>
                 
                 </div>
                 <div className="view">
-                <p>View Profile</p>
+                <p className='view-p'>View Profile</p>
                 </div></Link></li>
               <hr />
               <li>Help</li>

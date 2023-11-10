@@ -4,39 +4,39 @@
     margin-left: 210px;
     margin-right: 210px;
     margin-top: 10px;
-    
-    .network-left{
-        flex: 0.3;
-        background-color: white;
-        border: 0.5px solid lightgrey;
-        border-radius: 10px;
-        .heading{
-            padding-left: 15px;
-            margin-top: 35px;
-        }
- 
-    }
-    .network-right{
-        flex:0.8;
-        gap: 20px;
-        display: flex;
-        flex-direction: column;
-    }
-    .network-icon{
-        padding: 0 15px 0 15px;
-        display: flex;
-        justify-content: space-between;
- 
-        .icon{
-            font-size: large;
-        }
- 
- 
-    }
-    .network-icon:hover{
-        background-color: rgb(216, 211, 211);
-    }
- 
+}
+.network-left{
+    flex: 0.3;
+    background-color: white;
+    border: 0.5px solid lightgrey;
+    border-radius: 10px;
+   
+
+}
+.heading{
+    padding-left: 15px;
+    margin-top: 35px;
+}
+.network-right{
+    flex:0.8;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.network-icon{
+    padding: 0 15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+
+   
+
+
+}
+.icon{
+    font-size: large;
+}
+.network-icon:hover{
+    background-color: rgb(216, 211, 211);
 }
 .network-right-t1{
     display: flex;
@@ -73,51 +73,45 @@
     text-align: center;
     border: 0.5px solid lightgrey;
     border-radius: 15px;
-    .name{
-        font-size: large;
-        font-weight: 600;
-        text-align: center;
-        margin: -10px;
-    }
-    .name:hover{
-        text-decoration: underline;
-    }
-    .role{
-        font-size: medium;
-        font-weight: 400;
-        color: grey;
-        text-align: center;
-    }
-    .mutual{
-        font-size: small;
-        font-weight: 300;
-        color: grey;
-        text-align: center;
-    }
-    .button{
-        margin-left: 10px;
-        padding-bottom: 10px;
-        
-       
-        
-        
-    }
-    .button button {
-        color:rgb(21, 71, 137);
-        border: 1px solid rgb(21, 71, 137);
-        background-color: white;
-        cursor: pointer;
-        border-radius: 15px;
-        padding: 5px 15px 5px 15px;
- 
-        
-    }
-    .button button:hover{
-        background-color: rgb(157, 188, 227);
-        
-    }
-      
+}
+
+.name{
+    font-size: large;
+    font-weight: 600;
+    text-align: center;
+    margin: -10px;
+}
+.name:hover{
+    text-decoration: underline;
+}
+.role{
+    font-size: medium;
+    font-weight: 400;
+    color: grey;
+    text-align: center;
+}
+.mutual{
+    font-size: small;
+    font-weight: 300;
+    color: grey;
+    text-align: center;
+}
+.button{
+    margin-left: 10px;
+    padding-bottom: 10px; 
     
- 
- 
+}
+.button button {
+    color:rgb(21, 71, 137);
+    border: 1px solid rgb(21, 71, 137);
+    background-color: white;
+    cursor: pointer;
+    border-radius: 15px;
+    padding: 5px 15px 5px 15px;
+
+    
+}
+.button button:hover{
+    background-color: rgb(157, 188, 227);
+    
 }

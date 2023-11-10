@@ -26,44 +26,46 @@
     margin-left: 0;
     border: 1px solid grey;
     border-radius: 10px;
-    li{
-        margin-bottom: 10px;
-    }
     
-    hr{
-        width: 100%;
-        padding: none;
-    }
-    .dropdown-profile{
-        display: flex;
-       
-        align-items: center;
-        gap: 20px;
-        margin-bottom: 10px;
-    
-    }
-    img{
-        width: 40px;
-        height: 40px;
-        padding-left: 0;
-        border-radius: 50%;
-    }
-    h2{
-        font-size: 16px;
-    }
-    h2:hover{
-        text-decoration: underline;
-    }
-    p{
-        font-size: 12px;
-        margin-top: -5px;
-
-        
-    }
- 
-
 
 }
+
+li{
+    margin-bottom: 10px;
+}
+
+hr{
+    width: 100%;
+    padding: none;
+}
+.dropdown-profile{
+    display: flex;
+   
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 10px;
+
+}
+.dropdown-img{
+    width: 40px;
+    height: 40px;
+    padding-left: 0;
+    border-radius: 50%;
+}
+.h2{
+    font-size: 16px;
+}
+.h2:hover{
+    text-decoration: underline;
+}
+.p{
+    font-size: 12px;
+    margin-top: -5px;
+
+    
+}
+
+
 .view{
     border: 1px solid rgb(9,80,128);
     border-radius: 75px;
@@ -71,12 +73,15 @@
     cursor: pointer;
   
 
-    p{
-        font-size: 14px;
-        margin-bottom: 2px;
-        color: rgb(9, 80, 128);
-        font-weight: 500;
-    }
+    
+}
+
+.view-p{
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 2px;
+    color: rgb(9, 80, 128);
+    font-weight: 500;
 }
 
 .view:hover{
@@ -85,6 +90,7 @@
 
 .signout{
     margin-left: 0px;
+   
 }
 .signout:hover{
     text-decoration: underline;

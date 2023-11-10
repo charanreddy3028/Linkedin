@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { loginUser ,updateName} from '../Redux/Action';
 import { Link } from 'react-router-dom';
+import '../Login/Login.css'
 
 const Login = () => {
   const dispatch = useDispatch();
   const isAuthenticated = useSelector((state) => state.login.isAuthenticated);
   
-  // Use React state to manage form input values
+
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');

@@ -5,8 +5,7 @@ import { BiLike, BiRepost } from 'react-icons/bi';
 import { FaRegCommentDots } from 'react-icons/fa';
 import { BsFillSendFill } from 'react-icons/bs';
 import '../Posts/Post.css'
-import logo from '../assets/logo.png'
-import bg from '../assets/bgimage.jpeg'
+
 
 const PostItem = ({ post, onDelete }) => {
   return (
@@ -31,9 +30,9 @@ const PostItem = ({ post, onDelete }) => {
         </div>
       </div>
 
-      <div className="bgimage">
-        <p>{post.text}</p>
-        <img src={post.url} alt="" />
+      <div >
+        <p className='bgimage-p'>{post.text}</p>
+        <img className="bgimage" src={post.url} alt="" />
       </div>
 
       <div className="likes" style={{ listStyle: "none" }}>

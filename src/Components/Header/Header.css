@@ -24,21 +24,28 @@
     margin-bottom: 5px;
     
     
-    .search{
-        margin: 5px;
-    }
     
     
-    input{
-
-        height: 30px;
-    padding: 0px;
-    background-color:lightsteelblue;
-    border: none;
-    outline: none;
     
-   
-    }
     
 
 }
+
+.search{
+    margin: 5px;
+}
+.header-input{
+
+    height: 30px;
+padding: 0px;
+background-color:lightsteelblue;
+border: none;
+outline: none;
+
+    &::placeholder{
+        color: azure;
+    }
+
+
+}
+

@@ -47,14 +47,16 @@
     flex-direction: column;
 }
 .bgimage {
-    p{
-      margin: 20px;  
-    }
-    img{
+   
+    
        width: 100%;
-    }
+    
     
 }
+
+.bgimage-p{ 
+    margin: 20px;  
+  }
 
 .del{
     margin-left: 50%;
