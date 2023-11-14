@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux'; 
-import { addItem, deleteItem } from '../Redux/Action';
+import { useDispatch } from 'react-redux'; 
+import { addItem} from '../Redux/Action';
 import '../Profile/Skillspopup.css'
 
 
 
 const SkillsPopup = ({ onClose }) => {
   const dispatch = useDispatch();
-  const items = useSelector((state) => state.skills.items); 
+
   const [newItem, setNewItem] = useState('');
 
   const handleAddItem = (event) => {
@@ -18,9 +18,7 @@ const SkillsPopup = ({ onClose }) => {
     }
   };
 
-  const handleDeleteItem = (index) => {
-    dispatch(deleteItem(index));
-  };
+
 
   return (
     <div className="popup-overlay">

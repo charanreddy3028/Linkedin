@@ -6,11 +6,11 @@ import { MdOutlineModeEditOutline } from 'react-icons/md';
 import bg from '../assets/bgimage.jpeg';
 import logo from '../assets/logo.png';
 import { useDispatch } from 'react-redux';
-import { addItem, updateAbout } from '../Redux/Action';
+import {  updateAbout } from '../Redux/Action';
 import { useSelector } from 'react-redux';
 import Textarea from './Textarea';
 import SkillsPopup from './Skillspopup';
-import { deleteItem ,deleteExperience,deleteEducation,updateEducation} from '../Redux/Action';
+import { deleteItem ,deleteExperience,deleteEducation} from '../Redux/Action';
 import ExperiencePopup from './Experiencepopup';
 import {RiDeleteBin6Line} from 'react-icons/ri'
 import EducationPopup from './Educationpopup';
@@ -28,8 +28,7 @@ const Profile = () => {
   const [isSkillsPopupOpen, setIsSkillsPopupOpen] = useState(false);
   const [isExperiencePopupOpen, setIsExperiencePopupOpen] = useState(false);
   const [isEducationPopupOpen, setIsEducationPopupOpen] = useState(false);
-  const [isEditingEducation, setIsEditingEducation] = useState(false);
-  const [editedEducationIndex, setEditedEducationIndex] = useState(null);
+
 
 
   const openEducationPopup = () => {
@@ -43,10 +42,6 @@ const Profile = () => {
 
   
 
-  const handleCancelEducationEdit = () => {
-    setIsEditingEducation(false);
-    setEditedEducationIndex(null);
-  };
   const handleDeleteEducation = (index) => {
     dispatch(deleteEducation(index));
   };
