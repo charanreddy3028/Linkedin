@@ -1,7 +1,7 @@
 // reducers.js
 import { combineReducers } from 'redux';
 
-const skillsReducer = (state = { items: [['Python'], ['SQL'], ['Tableau']], }, action) => {
+const skillsReducer = (state = { items: [['Python'], ['React'], ['Javascript']], }, action) => {
   switch (action.type) {
     case 'ADD_SKILL':
       return {
@@ -18,7 +18,7 @@ const skillsReducer = (state = { items: [['Python'], ['SQL'], ['Tableau']], }, a
   }
 };
 
-const loginReducer = (state = { isAuthenticated: false, name: '', about: 'scsac' }, action) => {
+const loginReducer = (state = { isAuthenticated: false, name: '', about: 'Intern at Techsophy' }, action) => {
   switch (action.type) {
     case 'LOGIN_USER':
       const { email, password,  } = action.payload;
@@ -59,7 +59,7 @@ const registerReducer = (state = { users: [] }, action) => {
   }
 };
 
-const experienceReducer = (state = { experiences: [] }, action) => {
+const experienceReducer = (state = { experiences: [{role:'Software Engineer Intern',companyName:'Techsophy',fromDate:'21-08-2023',toDate:'till-date',location:'Hyderabad'}] }, action) => {
   switch (action.type) {
     case 'ADD_EXPERIENCE':
       return {
@@ -85,7 +85,7 @@ const experienceReducer = (state = { experiences: [] }, action) => {
   }
 };
 
-const educationReducer = (state = { educations: [] }, action) => {
+const educationReducer = (state = { educations: [{degree:'B Tech',institution:'Vignan Institute of technology and science',fromDate:'12-07-2018',toDate:'06-06-2022',location:'Hyderabad'}] }, action) => {
   switch (action.type) {
     case 'ADD_EDUCATION':
       return {
